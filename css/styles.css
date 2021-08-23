@@ -1,34 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
 body{
     margin: 0px;
 }
 .general{
     width: 100vw;
     height: 100vh;
-    background-image: linear-gradient(180deg, #bbbbbf, #ebebf2);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(180deg, #bbb8bf, #ebebf2);
+}
+
+.objeto{
+    width: 13em;
+    height: 13em;
+    overflow: hidden;
+    position: relative;
+    border-radius: 100%;
+    background-color: #f2c53d;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
-
-.objeto{
-    width: 18em;
-    height: 18em;
-}
 .objeto img{
-    width: 100%;
-    height: 100%;
+    width: 94%;
+    height: 94%;
     border-radius: 100%;
-    border-color: #F2C53D;
 }
 
-.hovic{
-    display: none;
-    background-image: linear-gradient(180deg, yellow);
+.nombre{
+    background-image: linear-gradient(180deg, transparent, #a6763c);
+    width: 100%;
+    height: 6em;
+    position: absolute;
+    bottom: -6em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
-
-.objeto:hover{
-    .hovic{
-        display: block;
-    }
+.nombre p{
+    text-align: center;
+    margin: 0px;
+    color: white;
+    font-family: Roboto;
+    font-size: 1.2em;
+}
+.objeto:hover .nombre{
+    bottom: 0em;
+    transition: 0.5s;
 }
